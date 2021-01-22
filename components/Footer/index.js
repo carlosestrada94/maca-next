@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { FaInstagram, FaBehance, FaEnvelope } from "react-icons/fa";
 //Custom
 import { menu } from "../../menu";
 
@@ -26,14 +27,32 @@ export default function Footer() {
       {/*  Links*/}
       <div className="flex border-b-2 border-gray-600">
         <div className="flex py-2 w-full justify-center sm:justify-start">
-          <div className=" pr-1 py-0.5 hover:text-primary-300 transition-all">
-            <a href={"https://www.instagram.com/macaaol_design/"}>Instagram</a>
+          <div className=" pr-1 py-0.5 hover:text-primary-300 transition-all flex items-center">
+            <a
+              href={"https://www.instagram.com/macaaol_design/"}
+              className="flex"
+            >
+              <span className=" flex items-center w-10 h-10 sm:hidden">
+                <FaInstagram className="w-full h-full" />
+              </span>
+              <span className="hidden sm:inline">Instagram</span>
+            </a>
           </div>
-          <div className=" p-1 py-0.5 border-gray-600 border-l-2 border-r-2 hover:text-primary-300 transition-all">
-            <a href={"https://www.behance.net/mcao-19962f8e"}>Behance</a>
+          <div className="py-0.5 px-4 sm:px-1 border-gray-600 sm:border-l-2 sm:border-r-2 hover:text-primary-300 transition-all">
+            <a href={"https://www.behance.net/mcao-19962f8e"} className="flex">
+              <span className=" flex items-center w-10 h-10 sm:hidden">
+                <FaBehance className="w-full h-full" />
+              </span>
+              <span className="hidden sm:inline">Behance</span>
+            </a>
           </div>
           <div className=" p-1 py-0.5 hover:text-primary-300 transition-all">
-            <a href={"mailto: maca132738@gmail.com"}>Email</a>
+            <a href={"mailto: maca132738@gmail.com"}>
+              <span className=" flex items-center w-10 h-10 sm:hidden">
+                <FaEnvelope className="w-full h-full" />
+              </span>
+              <span className="hidden sm:inline">Email</span>
+            </a>
           </div>
         </div>
         <div className=" w-full justify-end hidden sm:flex">{menuRender()}</div>

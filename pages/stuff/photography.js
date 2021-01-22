@@ -20,7 +20,7 @@ export default function Photography({ photos }) {
       return (
         <Link href={ref}>
           <a
-            className={`p-2 hover:text-primary-300 transition-all ${
+            className={`p-2 hover:text-primary-300 transition-all font-title ${
               router.pathname.includes(ref) ? "font-bold text-primary-300" : ""
             }`}
           >
@@ -37,7 +37,7 @@ export default function Photography({ photos }) {
   const fullPictureRender = () => {
     return (
       <div
-        className={`fixed top-0 py-12 md:px-12 left-0 h-screen w-screen bg-gray-800 bg-opacity-60 flex justify-center ${
+        className={`fixed top-0 md:py-12 md:px-12 left-0 h-screen w-screen bg-gray-800 bg-opacity-60 flex justify-center ${
           isFullActive ? "block" : "hidden"
         }`}
         onClick={() => {
@@ -50,7 +50,7 @@ export default function Photography({ photos }) {
             alt={selectedPic.caption}
             className="h-full w-full object-contain"
           />
-          <h2 className="absolute bottom-10 bg-gray-900 bg-opacity-70 text-gray-50 px-2 text-xl">
+          <h2 className="absolute bottom-10 bg-gray-900 bg-opacity-70 text-gray-50 px-2 text-base font-paragraph">
             {selectedPic.caption}
           </h2>
         </div>
@@ -86,7 +86,7 @@ export default function Photography({ photos }) {
       </Head>
       <Header />
       <div className="responsive-padding">
-        <div className="py-3">{menuRender()}</div>
+        <div className="pb-3 flex justify-center">{menuRender()}</div>
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 2xl:grid-cols-8 auto-rows-auto gap-2 py-1">
           {galleryRender()}
         </div>

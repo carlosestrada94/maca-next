@@ -11,7 +11,7 @@ export default function About() {
       </Head>
       <Header />
       <div className="responsive-padding">
-        <p className="w-full sm:w-3/5 mx-auto px-2 py-10 text-center font-paragraph">
+        <p className="w-full sm:w-3/5 mx-auto px-2 text-center font-paragraph">
           Hi! My name is María Camila Acuña. My friends call me Maca. I am an
           indsutrial/product designer.
           <br />
@@ -26,9 +26,11 @@ export default function About() {
           provide the chance to learn, and to contribute.
         </p>
         <div className="relative">
-          <p className="absolute top-1/3 w-2/3 text-xs px-6 italic font-paragraph">
+          <p className="absolute top-1/3 w-2/3 text-xs lg:text-base px-6 italic font-paragraph">
             "Building a concept that communicates our ideas, and which we feel
             identified with, in something tangible, makes us smile at life."
+            <br />
+            <span className="">- Maca Acuña</span>
           </p>
           <img
             className="pt-10 "

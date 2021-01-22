@@ -18,7 +18,7 @@ export default function Eighty() {
       return (
         <Link href={ref}>
           <a
-            className={`p-2 hover:text-primary-300 transition-all ${
+            className={`p-2 hover:text-primary-300 transition-all font-title ${
               router.pathname.includes(ref) ? "font-bold text-primary-300" : ""
             }`}
           >
@@ -36,10 +36,10 @@ export default function Eighty() {
         <link rel="icon" type={"image/png"} href="/favicon.png" />
       </Head>
       <Header />
-      <div className="responsive-padding">
-        <div>{menuRender()}</div>
-        <div className="py-4 text-6xl font-title font-extralight">
-          On progress...
+      <div className="responsive-padding ">
+        <div className=" pb-3 flex justify-center">{menuRender()}</div>
+        <div className="py-4 text-base font-title font-extralight bg-yellow-200 text-center">
+          In progress...
         </div>
       </div>
       <Footer />

@@ -18,7 +18,7 @@ export default function Work({ projects }) {
               </a>
             </Link>
             <div className="h-full w-full">
-              <img className="h-full w-full object-contain" src={thumbnail} />
+              <img className="h-full w-full object-cover" src={thumbnail} />
             </div>
           </div>
         );
