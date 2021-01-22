@@ -18,7 +18,7 @@ export default function Eighty() {
       return (
         <Link href={ref}>
           <a
-            className={`p-2 hover:text-primary-300 transition-all font-title ${
+            className={`p-2 hover:text-primary-300 transition-all font-title uppercase ${
               router.pathname.includes(ref) ? "font-bold text-primary-300" : ""
             }`}
           >

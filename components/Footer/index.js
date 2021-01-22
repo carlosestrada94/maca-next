@@ -23,7 +23,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="responsive-padding bg-red-300">
+    <div className="responsive-padding ">
       {/*  Links*/}
       <div className="flex border-b-2 border-gray-600">
         <div className="flex py-2 w-full justify-center sm:justify-start">

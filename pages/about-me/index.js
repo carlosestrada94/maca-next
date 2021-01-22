@@ -10,7 +10,7 @@ export default function About() {
         <link rel="icon" type={"image/png"} href="/favicon.png" />
       </Head>
       <Header />
-      <div className="responsive-padding bg-yellow-200">
+      <div className="responsive-padding ">
         <p className="w-full sm:w-3/5 mx-auto px-10 text-center font-paragraph max-w-screen-sm">
           Hi! My name is María Camila Acuña. My friends call me Maca. I am an
           indsutrial/product designer.
@@ -25,7 +25,7 @@ export default function About() {
           <br />I enjoy projects that challenge my skills, my creativity, and
           provide the chance to learn, and to contribute.
         </p>
-        <div className="relative flex bg-red-300">
+        <div className="relative flex ">
           <img
             className="pt-10 w-full sm:w-4/5 max-w-screen-sm mx-auto"
             src={
@@ -33,9 +33,9 @@ export default function About() {
             }
           />
         </div>
-        <div className="bg-green-100 text-center py-5 font-paragraph">
+        <div className="text-center pt-10 font-paragraph">
           <p>Thank you for visiting my portfolio.</p>
-          <p className="font-bold font-paragraph">Let´s talk!</p>
+          <p className="font-bold font-paragraph py-4">Let´s talk!</p>
           <p className="font-paragraph">
             Contact me through my social media or by mail (links are down
             below).
