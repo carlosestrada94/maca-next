@@ -12,7 +12,7 @@
 @tailwind utilities;
 
 .menu {
-  @apply p-2 text-base mx-4 md:mx-16 hover:text-primary-300 transition-all;
+  @apply p-2 text-base mx-4 md:mx-16 hover:text-primary-300 transition-all uppercase;
 }
 
 .menu-selected {
@@ -38,4 +38,14 @@
 html,
 body {
   background-color: #ffffff;
+}
+
+.responsive-landing {
+  height: 350px;
+}
+
+@media screen and (min-width: 768px) {
+  .responsive-landing {
+    height: 500px;
+  }
 }

@@ -30,7 +30,7 @@ export default function Eighty() {
   };
 
   return (
-    <div>
+    <div className="max-w-screen-2xl mx-auto">
       <Head>
         <title>Maca Acuña - Eighty</title>
         <link rel="icon" type={"image/png"} href="/favicon.png" />

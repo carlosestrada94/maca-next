@@ -79,7 +79,7 @@ export default function Photography({ photos }) {
   };
   //
   return (
-    <div>
+    <div className="max-w-screen-2xl mx-auto">
       <Head>
         <title>Maca Acuña - Photography</title>
         <link rel="icon" type={"image/png"} href="/favicon.png" />
@@ -87,7 +87,7 @@ export default function Photography({ photos }) {
       <Header />
       <div className="responsive-padding">
         <div className="pb-3 flex justify-center">{menuRender()}</div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 2xl:grid-cols-8 auto-rows-auto gap-2 py-1">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 2xl:grid-cols-6 auto-rows-auto gap-2 py-1">
           {galleryRender()}
         </div>
       </div>

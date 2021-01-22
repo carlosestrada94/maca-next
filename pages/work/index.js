@@ -33,7 +33,7 @@ export default function Work({ projects }) {
         <link rel="icon" type={"image/png"} href="/favicon.png" />
       </Head>
       <Header />
-      <div className="grid grid-cols-1 sm:grid-cols-2 auto-rows-max gap-4 responsive-padding">
+      <div className="bg-yellow-200 grid grid-cols-1 sm:grid-cols-2 auto-rows-max gap-4 responsive-padding">
         {thumbnailsRender()}
       </div>
       <Footer />
