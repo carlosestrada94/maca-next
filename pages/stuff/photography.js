@@ -60,11 +60,11 @@ export default function Photography({ photos }) {
   //
   const galleryRender = () => {
     if (photos) {
-      return photos.map(({ caption, photoSrc }) => {
+      return photos.map(({ caption, photoSrc, thumbnail }) => {
         return (
           <div className="h-70 sm:h-32 md:h-28 lg:24">
             <img
-              src={photoSrc}
+              src={thumbnail}
               alt={caption}
               className="h-full w-full object-cover cursor-pointer"
               onClick={() => {
@@ -103,7 +103,7 @@ export async function getStaticProps() {
   //
   try {
     const response = await client.fetch(
-      "*[_type == 'gallery']{caption, 'photoSrc': photo.asset->url}"
+      "*[_type == 'gallery']{caption, 'photoSrc': photo.asset->url, 'thumbnail': thumbnail.asset->url}"
     );
     //
     console.log(response);

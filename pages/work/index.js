@@ -47,7 +47,7 @@ export async function getStaticProps() {
   //
   try {
     const response = await client.fetch(
-      "*[_type == 'project'] {title, 'endpoint': slug.current, 'thumbnail': media[0].asset->url}"
+      "*[_type == 'project'] {title, 'endpoint': slug.current, 'thumbnail': thumbnail.asset->url}"
     );
     console.log(response);
     projects = response;
