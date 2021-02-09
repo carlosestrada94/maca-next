@@ -1,0 +1,75 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+.landing {
+  @apply min-h-screen w-screen font-primary flex flex-col justify-center;
+}
+
+.text {
+  @apply text-base;
+}
+
+.text-landing {
+  @apply text-center px-1 py-2 font-extralight;
+}
+
+.logo {
+  @apply font-logo text-center text-5xl md:text-6xl py-12;
+}
+
+.menu-item {
+  @apply font-primary p-2 text-base mx-4 md:mx-16 hover:text-primary-300 transition-all uppercase;
+}
+
+.menu-item-selected {
+  @apply font-bold text-primary-300;
+}
+
+.project-thumbnail {
+  @apply bg-gray-500 h-52 xl:h-64 relative mx-auto;
+}
+
+.project-thumbnail-cover {
+  @apply absolute top-0 left-0 w-full h-full bg-gray-600 bg-opacity-0 hover:bg-opacity-70 text-gray-50 text-opacity-0 hover:text-opacity-70 transition-all flex justify-center items-center;
+}
+
+.paragraph {
+  @apply font-secondary px-2 py-10 text-justify text-base;
+}
+
+.responsive-padding {
+  @apply sm:px-12 md:px-20 lg:px-52 xl:px-72 2xl:px-72 py-12;
+}
+
+.loading {
+  @apply text font-primary absolute top-0 left-2/4 transform -translate-x-8 flex items-center h-full w-full animate-pulse;
+}
+
+.columns-1 {
+  column-count: 1;
+}
+
+.columns-3 {
+  column-count: 3;
+}
+
+.columns-3 {
+  column-count: 4;
+}
+
+html,
+body {
+  background-color: #ffffff;
+}
+
+.responsive-landing {
+  height: 350px;
+}
+
+@media screen and (min-width: 768px) {
+  .responsive-landing {
+    height: 500px;
+  }
+}

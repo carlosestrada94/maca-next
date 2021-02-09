@@ -11,8 +11,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        title: ["neuzeit-grotesk"],
-        paragraph: ["Open Sans"],
+        primary: ["neuzeit-grotesk"],
+        secondary: ["Open Sans"],
         logo: ["Quicksand"],
       },
     },

@@ -1,24 +1,49 @@
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import Header from "../../components/Header";
 import Head from "next/head";
+import { gsap } from "gsap";
 //Custom
 import { client } from "../../sanityClient";
 import Footer from "../../components/Footer";
+import { onLoadAnim } from "../../animations";
 
 export default function Work({ projects }) {
   //
+  const thumbsContainerRef = useRef();
+  //
+  useEffect(() => {
+    //
+    const thumbnails = thumbsContainerRef.current.querySelectorAll(
+      ".project-thumbnail"
+    );
+    //
+    gsap
+      .timeline()
+      .to(thumbsContainerRef.current, { opacity: 1 })
+      .from(thumbnails, { opacity: 0, stagger: 0.2 });
+  }, []);
+  //
   const thumbnailsRender = () => {
     if (projects) {
-      return projects.map(({ title, endpoint, thumbnail }) => {
+      return projects.map(({ title, endpoint, thumbnail }, index) => {
         return (
-          <div className="bg-gray-500 h-72 w-11/12 max-w-screen-sm sm:w-full sm:h-44 md:h-52 xl:h-64 2xl:h-72 relative mx-auto">
+          <div
+            className="project-thumbnail rounded overflow-hidden"
+            key={index}
+          >
             <Link href={`/work/project/${endpoint}`}>
-              <a className="absolute top-0 left-0 w-full h-full bg-gray-600 bg-opacity-0 hover:bg-opacity-70 text-gray-50 text-opacity-0 hover:text-opacity-70 transition-all flex justify-center items-center">
-                <h3 className="text-center font-title text-base">{title}</h3>
+              <a className="project-thumbnail-cover">
+                <h3 className="text font-primary">{title}</h3>
               </a>
             </Link>
             <div className="h-full w-full">
-              <img className="h-full w-full object-cover" src={thumbnail} />
+              <img
+                className="h-full w-full object-cover"
+                src={thumbnail}
+                alt={`Project ${title} thumbnail`}
+                // onLoad={(e) => onLoadAnim(e.target)}
+              />
             </div>
           </div>
         );
@@ -33,7 +58,10 @@ export default function Work({ projects }) {
         <link rel="icon" type={"image/png"} href="/favicon.png" />
       </Head>
       <Header />
-      <div className="grid grid-cols-1 sm:grid-cols-2 auto-rows-max gap-4 responsive-padding">
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 auto-rows-max gap-4 responsive-padding opacity-0"
+        ref={thumbsContainerRef}
+      >
         {thumbnailsRender()}
       </div>
       <Footer />

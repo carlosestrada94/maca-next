@@ -4,6 +4,7 @@ import Header from "../../../components/Header";
 //Custom
 import { client } from "../../../sanityClient";
 import Footer from "../../../components/Footer";
+import { onLoadAnim } from "../../../animations";
 
 export default function Project({ project }) {
   //
@@ -20,14 +21,19 @@ export default function Project({ project }) {
             <h2 className=" text-right px-2 text-5xl md:text-6xl font-title">
               {project.title}
             </h2>
-            <p className="font-paragraph px-2 py-10 text-justify text-base">
+            <p className="text px-2 sm:px-0 py-10 text-justify">
               {project.description}
             </p>
             <div>
               {project.images.map((src) => {
                 return (
                   <div className="py-2">
-                    <img src={src} />
+                    <img
+                      className="opacity-0"
+                      src={src}
+                      alt={`${project.title} project image`}
+                      onLoad={(e) => onLoadAnim(e.target)}
+                    />
                   </div>
                 );
               })}

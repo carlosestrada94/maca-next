@@ -1,6 +1,8 @@
 import Head from "next/head";
+//
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { onLoadAnim } from "../../animations";
 
 export default function About() {
   return (
@@ -10,8 +12,8 @@ export default function About() {
         <link rel="icon" type={"image/png"} href="/favicon.png" />
       </Head>
       <Header />
-      <div className="responsive-padding ">
-        <p className="w-full sm:w-3/5 mx-auto px-10 text-center font-paragraph max-w-screen-sm">
+      <div className="responsive-padding">
+        <p className="text text-center max-w-screen-sm mx-auto">
           Hi! My name is María Camila Acuña. My friends call me Maca. I am an
           industrial/product designer.
           <br />
@@ -25,22 +27,23 @@ export default function About() {
           <br />I enjoy projects that challenge my skills, my creativity, and
           provide the chance to learn, and to contribute.
         </p>
-        <div className="relative flex ">
+        <div className="relative flex">
           <img
-            className="pt-10 w-full sm:w-4/5 max-w-screen-sm mx-auto"
+            className="h-full w-full pt-10 max-w-screen-md mx-auto object-contain"
+            style={{ opacity: 0 }}
             src={
               "https://maca-projects.s3-sa-east-1.amazonaws.com/maca-photo.jpeg"
             }
+            onLoad={(e) => onLoadAnim(e.target)}
           />
         </div>
-        <div className="text-center pt-10 font-paragraph">
+        <div className="text text-center pt-10 text-center max-w-screen-sm mx-auto">
           <p>Thank you for visiting my portfolio.</p>
-          <p className="font-bold font-paragraph py-4">Let´s talk!</p>
-          <p className="font-paragraph">
+          <p className="py-4 font-bold">Let´s talk!</p>
+          <p>
             Contact me through my social media or by mail (links are down
             below).
           </p>
-          <p className="font-paragraph"></p>
         </div>
       </div>
       <Footer />

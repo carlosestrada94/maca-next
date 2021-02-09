@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 //Custom
@@ -7,29 +8,31 @@ export default function Header() {
   const router = useRouter();
   //
   const menuRender = () => {
-    return menu.map(({ title, ref }) => {
+    return menu.map(({ title, ref }, index) => {
       return (
-        <Link href={ref}>
-          <a
-            className={
-              router.pathname.includes(ref) ? "menu menu-selected" : "menu"
-            }
-          >
-            {title}
-          </a>
-        </Link>
+        <Fragment key={index}>
+          <Link href={ref}>
+            <a
+              className={`menu-item ${
+                router.pathname.includes(ref) ? "menu-item-selected" : ""
+              }`}
+            >
+              {title}
+            </a>
+          </Link>
+        </Fragment>
       );
     });
   };
 
   return (
     <div>
-      <h1 className="font-logo text-center text-5xl md:text-6xl py-12">
+      <h1 className="logo">
         <Link href={"/"}>
           <a>Maca Acuña</a>
         </Link>
       </h1>
-      <div className="font-title flex justify-center py-2">{menuRender()}</div>
+      <div className="flex justify-center py-2">{menuRender()}</div>
     </div>
   );
 }
