@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { client } from "../../sanityClient";
-import { links } from "./links";
+import { links } from "../../links/stuff";
 import { onLoadAnim } from "../../animations";
 
 export default function Photography({ photos }) {

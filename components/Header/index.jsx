@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 //Custom
-import { menu } from "../../menu";
+import { menu } from "../../links/main";
 
 export default function Header() {
   const router = useRouter();

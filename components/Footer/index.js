@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaInstagram, FaBehance, FaEnvelope } from "react-icons/fa";
 //Custom
-import { menu } from "../../menu";
+import { menu } from "../../links/main";
 
 export default function Footer() {
   //

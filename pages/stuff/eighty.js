@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 //Custom
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { links } from "./links";
+import { links } from "../../links/stuff";
 
 export default function Eighty() {
   //
